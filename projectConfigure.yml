@@ -44,16 +44,11 @@ Resources:
           dnf install pip -y
           pip install flask
           cd /home/ec2-user
-          wget https://raw.githubusercontent.com/ADMYZZ/romanNumerialProject/main/roman-numerals-converter-app.py
-          mkdir templates
-          cd /home/ec2-user/templates
-          wget https://raw.githubusercontent.com/ADMYZZ/romanNumerialProject/main/templates/index.html
-          wget https://raw.githubusercontent.com/ADMYZZ/romanNumerialProject/main/templates/result.html
-          chmod 700 index.html
-          chmod 700 result.html
-          cd ..
-          chmod 700 roman-numerals-converter-app.py
-          python3 roman-numerals-converter-app.py
+          git clone https://github.com/ADMYZZ/romanNumerialProject.git
+          chmod 700 romanNumerialProject/templates/index.html
+          chmod 700 romanNumerialProject/templates/result.html
+          chmod 700 romanNumerialProject/roman-numerals-converter-app.py
+          python3 romanNumerialProject/roman-numerals-converter-app.py
 
 Outputs:
   WebServerURL:
